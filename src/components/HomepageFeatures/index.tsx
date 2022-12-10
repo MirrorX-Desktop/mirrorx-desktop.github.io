@@ -14,7 +14,7 @@ const FeatureList: FeatureItem[] = [
         Svg: require('@site/static/img/security.svg').default,
         description: (
             <>
-                TODO
+                Support end-to-end encryption natively keeps all data and behaviours under user control.
             </>
         ),
     },
@@ -23,7 +23,8 @@ const FeatureList: FeatureItem[] = [
         Svg: require('@site/static/img/fast.svg').default,
         description: (
             <>
-                TODO
+                Support hardware-accelerated screen acquisition and rendering. Allow p2p direct connections
+                within LAN, minimize interaction delay.
             </>
         ),
     },
@@ -33,7 +34,7 @@ const FeatureList: FeatureItem[] = [
         description: (
             <>
                 MirrorX is a COMPLETELY open source project. Not only client-side of MirrorX,
-                but also includes Signaling-Server, Endpoints-Server, etc.
+                but also includes server-side programs.
             </>
         ),
     },
