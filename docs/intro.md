@@ -2,46 +2,91 @@
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# Tutorial
 
-Let's discover **Docusaurus in less than 5 minutes**.
 
-## Getting Started
+MirrorX is a remote desktop control tool powered by [Rust](https://github.com/rust-lang/rust). With fully open-source client and server, native E2EE support, users can build SECURITY and FAST remote control network, which is fully under control of users.
 
-Get started by **creating a new site**.
+> **MirrorX is on the early stage with active developing now. Please forgive us that we cannot make any backward compatibility commitments at this time.**
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+## Component
 
-### What you'll need
+- [MirrorX Client](https://github.com/MirrorX-Desktop/MirrorX)
+- [MirrorX Signaling Server](https://github.com/MirrorX-Desktop/signaling)
+- [MirrorX Endpoints Server](https://github.com/MirrorX-Desktop/endpoints)
 
-- [Node.js](https://nodejs.org/en/download/) version 16.14 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+## Free Public Servers
 
-## Generate a new site
+> This server is support at my own expense, so please do not abuse it.
 
-Generate a new Docusaurus site using the **classic template**.
+| Location | Specification  |
+| :------: | :------------: |
+|  Seoul   | 1vCPU & 1G RAM |
 
-The classic template will automatically be added to your project after you run the command:
+## Available Platform
 
-```bash
-npm init docusaurus@latest my-website classic
+- [x] macOS
+- [x] Windows
+- [ ] Linux (WIP)
+- [ ] Android (WIP)
+- [ ] iOS (WIP)
+- [ ] Web (WIP)
+
+## How to build
+
+### Prerequisite
+
+1. Install `nodejs && npm && yarn`.
+2. Path for `ProtoBuf Compiler (protoc)` added to PATH.
+3. Install `tauri-cli`.
+
+```console
+cargo install tauri-cli
 ```
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
+### Steps
 
-The command also installs all necessary dependencies you need to run Docusaurus.
+1. Download pre built media libraries artifacts from [MirrorX-Desktop/media_libraries_auto_build](https://github.com/MirrorX-Desktop/media_libraries_auto_build) Release.
+2. Unzip artifacts to anywhere you'd like to put in.
+3. **Add unzipped artifacts path to your Environment Variables**
 
-## Start your site
+   - For MacOS
 
-Run the development server:
+     ```console
+     $ export MIRRORX_MEDIA_LIBS_PATH=your artifacts unzip destination path
+     ```
 
-```bash
-cd my-website
-npm run start
+   - For Windows **(run As Administrator)**
+     ```PowerShell
+     PS > [Environment]::SetEnvironmentVariable('MIRRORX_MEDIA_LIBS_PATH', 'your artifacts unzip destination path' , 'Machine')
+     ```
+
+4. Run as Debug Mode
+
+```console
+cargo tauri dev
 ```
 
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
+## About Pre Built Media Libraries
 
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
+To speed up the build process, we made [MirrorX-Desktop/media_libraries_auto_build](https://github.com/MirrorX-Desktop/media_libraries_auto_build) to automatically and transparently build external libraries. Includes [FFmpeg](https://git.ffmpeg.org/ffmpeg.git), libx264([Windows](https://github.com/ShiftMediaProject/x264.git), [MacOS](https://code.videolan.org/videolan/x264.git)), libx265([Windows](https://github.com/ShiftMediaProject/x265.git), [MacOS](https://bitbucket.org/multicoreware/x265_git.git)), libopus([Windows](https://github.com/ShiftMediaProject/opus.git), [MacOS](https://github.com/xiph/opus.git)) and MFXDispatch([Windows](https://github.com/ShiftMediaProject/mfx_dispatch.git) only). For more details, you can look through [Workflows](https://github.com/MirrorX-Desktop/media_libraries_auto_build/tree/main/.github/workflows) on [MirrorX-Desktop/media_libraries_auto_build](https://github.com/MirrorX-Desktop/media_libraries_auto_build).
 
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+Of course, you can completely built those libraries by yourself according to our [Workflows](https://github.com/MirrorX-Desktop/media_libraries_auto_build/tree/main/.github/workflows).
+
+## Thanks
+
+### Thanks these awesome open source projects that make MirrorX becomes true.
+
+(listed partial with in no particular order, thanks all the authors of dependencies in Cargo.toml and package.json)
+
+1. [Rust](https://github.com/rust-lang/rust)
+2. [Tokio](https://github.com/tokio-rs/tokio)
+3. [FFMPEG](https://ffmpeg.org)
+4. [serde](https://github.com/serde-rs/serde)
+5. [ring](https://github.com/briansmith/ring)
+6. [egui](https://github.com/emilk/egui)
+7. [windows-rs](https://github.com/microsoft/windows-rs)
+8. [sveltekit](https://github.com/sveltejs/kit)
+9. [daisyUI](https://github.com/saadeghi/daisyui)
+10. [tailwindcss](https://github.com/tailwindlabs/tailwindcss)
+11. [ShiftMediaProject](https://github.com/ShiftMediaProject)
