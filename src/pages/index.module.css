@@ -16,8 +16,6 @@
   }
 }
 
-.buttons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.a {
+  margin: 0 5px;
 }
