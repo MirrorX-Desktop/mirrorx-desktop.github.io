@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmirrorx_cloud=self.webpackChunkmirrorx_cloud||[]).push([[386],{7101:r=>{r.exports=JSON.parse('{"permalink":"/mirrorx.app/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":2,"blogDescription":"Blog","blogTitle":"MirrorX Releases"}')}}]);
