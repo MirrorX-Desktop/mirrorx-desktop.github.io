@@ -16,6 +16,7 @@ const config = {
 
   organizationName: "MirrorX-Desktop",
   projectName: "mirrorx-desktop.github.io",
+  deploymentBranch: "gh-pages",
   trailingSlash: false,
 
   i18n: {
