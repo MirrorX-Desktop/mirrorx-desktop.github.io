@@ -1,116 +1,117 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const lightCodeTheme = require("prism-react-renderer/themes/github");
+const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-    title: 'MirrorX',
-    tagline: 'Secure, Fast and Light remote desktop & file manager tool powered by Tauri and egui.',
-    url: 'https://mirrorx.cloud',
-    baseUrl: '/',
-    onBrokenLinks: 'throw',
-    onBrokenMarkdownLinks: 'warn',
-    favicon: 'img/favicon.ico',
+  title: "MirrorX",
+  tagline: "Remote control tool for enterprise, teams and individuals.",
+  url: "https://mirrorx.app",
+  baseUrl: "/",
+  onBrokenLinks: "throw",
+  onBrokenMarkdownLinks: "warn",
+  favicon: "img/favicon.ico",
 
-    organizationName: 'MirrorX-Desktop',
-    projectName: 'MirrorX',
+  organizationName: "MirrorX-Desktop",
+  projectName: "mirrorx.app",
+  trailingSlash: false,
 
-    i18n: {
-        defaultLocale: 'en',
-        locales: ['en'],
-    },
+  i18n: {
+    defaultLocale: "en",
+    locales: ["en"],
+  },
 
-    presets: [
-        [
-            'classic',
-            /** @type {import('@docusaurus/preset-classic').Options} */
-            ({
-                docs: {
-                    sidebarPath: require.resolve('./sidebars.js'),
-                },
-                blog: {
-                    blogTitle: "MirrorX Releases",
-                    showReadingTime: true,
-                },
-                theme: {
-                    customCss: require.resolve('./src/css/custom.css'),
-                },
-            }),
-        ],
+  presets: [
+    [
+      "classic",
+      /** @type {import('@docusaurus/preset-classic').Options} */
+      ({
+        docs: {
+          sidebarPath: require.resolve("./sidebars.js"),
+        },
+        blog: {
+          blogTitle: "MirrorX Releases",
+          showReadingTime: true,
+        },
+        theme: {
+          customCss: require.resolve("./src/css/custom.css"),
+        },
+      }),
     ],
+  ],
 
-    themeConfig:
+  themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-        ({
-            navbar: {
-                title: 'MirrorX',
-                logo: {
-                    alt: 'MirrorX',
-                    src: 'img/logo.svg',
-                },
-                items: [
-                    {
-                        type: 'doc',
-                        docId: 'intro',
-                        position: 'left',
-                        label: 'Tutorial',
-                    },
-                    {to: 'blog', label: 'Releases', position: 'left'},
-                    {
-                        href: 'https://github.com/MirrorX-Desktop/MirrorX',
-                        label: 'GitHub',
-                        position: 'right',
-                    },
-                ],
-            },
-            footer: {
-                style: 'dark',
-                links: [
-                    {
-                        title: 'Docs',
-                        items: [
-                            {
-                                label: 'Tutorial',
-                                to: '/docs/intro',
-                            },
-                        ],
-                    },
-                    // {
-                    //   title: 'Community',
-                    //   items: [
-                    //     {
-                    //       label: 'Stack Overflow',
-                    //       href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-                    //     },
-                    //     {
-                    //       label: 'Discord',
-                    //       href: 'https://discordapp.com/invite/docusaurus',
-                    //     },
-                    //     {
-                    //       label: 'Twitter',
-                    //       href: 'https://twitter.com/docusaurus',
-                    //     },
-                    //   ],
-                    // },
-                    {
-                        title: 'More',
-                        items: [
-                            {
-                                label: 'GitHub',
-                                href: 'https://github.com/MirrorX-Desktop/MirrorX',
-                            },
-                        ],
-                    },
-                ],
-                copyright: `Copyright © ${new Date().getFullYear()} MirrorX. Built with Docusaurus.`,
-            },
-            prism: {
-                theme: lightCodeTheme,
-                darkTheme: darkCodeTheme,
-            },
-        }),
+    ({
+      navbar: {
+        title: "MirrorX",
+        logo: {
+          alt: "MirrorX",
+          src: "img/logo.svg",
+        },
+        items: [
+          {
+            type: "doc",
+            docId: "intro",
+            position: "left",
+            label: "Tutorial",
+          },
+          { to: "blog", label: "Releases", position: "left" },
+          {
+            href: "https://github.com/MirrorX-Desktop/MirrorX",
+            label: "GitHub",
+            position: "right",
+          },
+        ],
+      },
+      footer: {
+        style: "dark",
+        links: [
+          {
+            title: "Docs",
+            items: [
+              {
+                label: "Tutorial",
+                to: "/docs/intro",
+              },
+            ],
+          },
+          // {
+          //   title: 'Community',
+          //   items: [
+          //     {
+          //       label: 'Stack Overflow',
+          //       href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+          //     },
+          //     {
+          //       label: 'Discord',
+          //       href: 'https://discordapp.com/invite/docusaurus',
+          //     },
+          //     {
+          //       label: 'Twitter',
+          //       href: 'https://twitter.com/docusaurus',
+          //     },
+          //   ],
+          // },
+          {
+            title: "More",
+            items: [
+              {
+                label: "GitHub",
+                href: "https://github.com/MirrorX-Desktop/MirrorX",
+              },
+            ],
+          },
+        ],
+        copyright: `Copyright © ${new Date().getFullYear()} MirrorX. Built with Docusaurus.`,
+      },
+      prism: {
+        theme: lightCodeTheme,
+        darkTheme: darkCodeTheme,
+      },
+    }),
 };
 
 module.exports = config;
