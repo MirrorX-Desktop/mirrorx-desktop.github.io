@@ -9,13 +9,13 @@ const config = {
   title: "MirrorX",
   tagline: "Remote control tool for enterprise, teams and individuals.",
   url: "https://mirrorx.app",
-  baseUrl: "/mirrorx.app/",
+  baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
 
   organizationName: "MirrorX-Desktop",
-  projectName: "mirrorx.app",
+  projectName: "mirrorx-desktop.github.io",
   trailingSlash: false,
 
   i18n: {
