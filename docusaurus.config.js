@@ -79,29 +79,25 @@ const config = {
               },
             ],
           },
-          // {
-          //   title: 'Community',
-          //   items: [
-          //     {
-          //       label: 'Stack Overflow',
-          //       href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-          //     },
-          //     {
-          //       label: 'Discord',
-          //       href: 'https://discordapp.com/invite/docusaurus',
-          //     },
-          //     {
-          //       label: 'Twitter',
-          //       href: 'https://twitter.com/docusaurus',
-          //     },
-          //   ],
-          // },
           {
-            title: "More",
+            title: "Community",
             items: [
               {
-                label: "GitHub",
-                href: "https://github.com/MirrorX-Desktop/MirrorX",
+                label: "Discord",
+                href: "https://discord.gg/dmtQhHWhyg",
+              },
+              {
+                label: "Github Discussions",
+                href: "https://github.com/MirrorX-Desktop/MirrorX/discussions",
+              },
+            ],
+          },
+          {
+            title: "Contact Us",
+            items: [
+              {
+                label: "contact@mirrorx.app",
+                href: "mailto:contact@mirrorx.app",
               },
             ],
           },
