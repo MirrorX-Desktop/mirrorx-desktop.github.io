@@ -44,7 +44,7 @@ export default function Home(): JSX.Element {
     const {siteConfig} = useDocusaurusContext();
     return (
         <Layout
-            title={`${siteConfig.title}`}
+            title={`Remote control tool for enterprise, teams and individuals`}
             description="Description will go into a meta tag in <head />">
             <HomepageHeader/>
             <main>
